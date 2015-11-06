@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Betting game</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+</head>
+<body>
+
+<h1>JS Betting Game</h1>
+
+<div>
+  <h3>Enter a BET between $5 and $10 and a GUESS between 1 and 10</h3>
+  <p>If you guess a random number correctly, you double your money. 
+  If you guess within 1 of the number, you push. If you don't guess within 1 of the number, you lose your money.</p>
+  <div id="balanceDiv"></div>
+    <label>Bet:</label>
+    <input type="text" name="betAmount" id="betAmount">
+    <label>Guess:</label>
+    <input type="text" name="userGuess" id="userGuess">
+    <button id="playButton">Play</button>
+    <button id="newGameButton">New Game</button>
+  <div id="alertDiv"></div>
+</div>
+
+</body>
+</html>
