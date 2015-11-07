@@ -4,7 +4,7 @@ $(function() {
   }
 
   var balance = 100;
-  $("#balanceDiv").text("Balance: $" + balance);
+  $(".balance").text("Balance: $" + balance);
   
   function bettingGame () {
     var betAmount = $("#betAmount").val();
@@ -24,25 +24,25 @@ $(function() {
         balance -= betAmount;
         $("#alertDiv").text("Too bad! You guessed " + userGuess + ". The number was " + randomNumber + ". You lost $" + betAmount + " and now have a balance of $" + balance + ".");
       }
-      $("#balanceDiv").text("Balance: $" + balance);
+      $(".balance").text("Balance: $" + balance);
     } else {
       $("#alertDiv").text("Invalid Bet/Guess Combination. Please enter valid inputs.");
     }
-    $("#betAmount").val("");
-    $("#userGuess").val("");
+    // $("#betAmount").val("");
+    // $("#userGuess").val("");
   }
   
   $("#playButton").on( "click" , function(){
     bettingGame();
   });
 
-  $("#newGameButton").on( "click" , function() {
-    balance = 100;
-    $("#balanceDiv").text("Balance: $" + balance);
-    $("#alertDiv").text("");
-    $("#betAmount").val("");
-    $("#userGuess").val("");
-  });
+  // $("#newGameButton").on( "click" , function() {
+  //   balance = 100;
+  //   $("#balanceDiv").text("Balance: $" + balance);
+  //   $("#alertDiv").text("");
+  //   $("#betAmount").val("");
+  //   $("#userGuess").val("");
+  // });
 });
 
 
